@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('BrandonGrotesque-Bold.eot');
+    src: url('BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BrandonGrotesque-Bold.woff2') format('woff2'),
+        url('BrandonGrotesque-Bold.woff') format('woff'),
+        url('BrandonGrotesque-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('BrandonGrotesque-Light.eot');
+    src: url('BrandonGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+        url('BrandonGrotesque-Light.woff2') format('woff2'),
+        url('BrandonGrotesque-Light.woff') format('woff'),
+        url('BrandonGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-Light.eot');
+    src: url('Teko-Light.eot?#iefix') format('embedded-opentype'),
+        url('Teko-Light.woff2') format('woff2'),
+        url('Teko-Light.woff') format('woff'),
+        url('Teko-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('BrandonGrotesque-Medium.eot');
+    src: url('BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BrandonGrotesque-Medium.woff2') format('woff2'),
+        url('BrandonGrotesque-Medium.woff') format('woff'),
+        url('BrandonGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('BrandonGrotesque-Regular.eot');
+    src: url('BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('BrandonGrotesque-Regular.woff2') format('woff2'),
+        url('BrandonGrotesque-Regular.woff') format('woff'),
+        url('BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

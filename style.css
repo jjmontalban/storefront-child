@@ -1,0 +1,415 @@
+/*
+Theme Name: Storefront tema hijo
+Template: storefront
+Author: jjmontalban.com
+Description: Tema hijo para storefront.
+*/
+
+/**************************************/
+/* generales                          */
+/**************************************/
+
+/* Fonts & background */
+body {
+    font-family: 'Brandon Grotesque';
+    background-color: #242424;
+}
+
+/* titulos */
+h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+/* full width */
+.col-full {
+    max-width: 100% !important;
+}
+
+p {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+/* Cabecera */
+.site-header {
+    background-color:#242424;
+    border-bottom-color: rgb(154,239,254);
+}
+
+/* Ocultar menu ppal para version escritorio */
+@media(min-width:768px) { 
+  
+    .primary-navigation {
+        display: none;
+    }
+}
+
+/* Alinear menu secundario a la drcha */
+.secondary-navigation {
+    float: right !important; 
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.site-header, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, 
+.secondary-navigation ul.menu ul, .storefront-handheld-footer-bar, .storefront-handheld-footer-bar ul li > a, 
+.storefront-handheld-footer-bar ul li.search .site-search, button.menu-toggle, button.menu-toggle:hover {
+    background-color: #242424;
+    width: auto;
+}
+
+/* Botón pruébalo gratis */
+.wp-block-button__link:not(.has-background) {
+    background-color: red;
+    background-image: linear-gradient(to right, red, rgb(255, 209, 5));
+    color: white;
+}
+
+.entry-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+/**************************************/
+/* Listado de productos (página ppal) */
+/**************************************/
+
+.woocommerce-loop-product__title {
+    font-size: 2rem !important;
+}
+
+.woocommerce li.product {
+    vertical-align: top;
+    display: inline-block;
+    float: none;
+}
+
+.woocommerce ul.products {
+    text-align: center;
+}
+
+h2 .woocommerce-loop-product__title {
+    font-family: 'Brandon Grotesque';
+    font-size: 21px !important;
+    font-weight: 600 !important;
+}
+
+/* imagen del producto reducida al 50% */
+ul.products li.product img {
+    width: 50%;
+  }
+
+/* ocultar cosas
+titulo de la categoria de producto */
+/* Ocultar migas de pan */
+/* carrito del menu ppal */
+/* ocultar buscardor en el menu colful  */
+.page-title, .woocommerce-breadcrumb, .woocommerce-result-count, .storefront-sorting, 
+.site-footer, #site-header-cart, .site-search {
+    display: none;
+}
+
+/* Precio (1€) */
+ul.products li.product .price, ul.products .wc-block-grid__product .price, 
+.wc-block-grid__products li.product .price, .wc-block-grid__products .wc-block-grid__product .price {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+/* Caja de producto  */
+.page-template-template-fullwidth-php .site-main ul.products.columns-3 li.product, 
+.page-template-template-fullwidth-php .header-widget-region ul.products.columns-3 li.product, 
+.page-template-template-homepage-php .site-main ul.products.columns-3 li.product, 
+.page-template-template-homepage-php .header-widget-region ul.products.columns-3 li.product, 
+.storefront-full-width-content .site-main ul.products.columns-3 li.product, 
+.storefront-full-width-content .header-widget-region ul.products.columns-3 li.product {    
+    background-color: #242424;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    /* Sombra */
+    -webkit-box-shadow: 0px 10px 11px 5px rgba(0,0,0,0.54); 
+    box-shadow: 0px 10px 11px 5px rgba(0,0,0,0.54);
+
+    /* Radius */
+    -webkit-border-radius: 250px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius: 250px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-radius: 250px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Boton para abrir ventana emergente (saber mas) */
+.quick-view-button {
+    width: 30%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    font-weight: 300;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.quick-view-button::before {
+    content: none !important;
+}
+
+/* Botones de comprar */
+.btn-add-peace {
+    width: 60%;
+    border-radius: 5px;
+    background-color: #bd8a2c;
+    background-image: linear-gradient(to right, #bd8a2c, #b85625);
+    color: white;
+    font-family: 'Brandon Grotesque';
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.btn-add-sleep {
+    width: 60%;
+    border-radius: 5px;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+    color: white;
+    font-family: 'Brandon Grotesque';
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.btn-add-relax {
+    width: 60%;
+    border-radius: 5px;
+    background-color: #81e280;
+    background-image: linear-gradient(to right, #81e280, #80ced5);
+    color: white;
+    font-family: 'Brandon Grotesque';
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+/**************************************/
+/* Checkout                           */
+/**************************************/
+
+/* Ocultar avisos y mensajes de error varios */
+.woocommerce-info, .woocommerce-message, .woocommerce-error {
+    display: none;
+}
+
+/* Ocultar campos y titulos */
+.woocommerce-additional-fields, .woocommerce-billing-fields h3, .cart-subtotal, .product-total {
+    display: none;
+}
+
+/* Todo lo relacionado con cupones */
+.coupon-primeracompra, .woocommerce-remove-coupon {
+    display: none;
+}
+
+/* Unificar a 1 columna para version de escritorio */
+@media(min-width:768px) { 
+    
+    .checkout .col2-set {
+        width: 100%;
+    }
+    
+    .checkout .col2-set .col-1 {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #order_review_heading, #order_review {
+        width: 60%;
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+  }
+
+/* para rectificar el ancho la tabla de productos y totales */
+table.woocommerce-checkout-review-order-table .product-name {
+    width: 75%;
+}
+
+/* Eliminar X1 (cantidad del producto) */
+.product-quantity {
+    display: none;
+}
+
+
+/************************************/
+/* Ventana emergente                */
+/************************************/
+
+div.quick-view {
+text-align: center;
+}
+
+div.pp_woocommerce .pp_content_container {
+    background-color: #242424;
+}
+
+/* Botones comprar de la ventana emergente */
+.btn-relax-quick {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #81e280;
+    background-image: linear-gradient(to right, #81e280, #80ced5);
+    border-radius: 5px;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+    display: block;
+    width: 20%;
+}
+
+.btn-sleep-quick {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+    border-radius: 5px;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: white;
+    display: block;
+    width: 20%;
+}
+
+.btn-peace-quick {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bd8a2c;
+    background-image: linear-gradient(to right, #bd8a2c, #b85625);
+    border-radius: 5px;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: white;
+    display: block;
+    width: 20%;
+}
+
+/* Quitar barra horizontal */
+.post-type-archive-product .pp_woocommerce_quick_view .pp_content {
+    overflow: hidden !important;
+}
+
+/* Quitar metas */
+.single-product div.product .product_meta {
+    display: none;
+}
+
+/* Quitar precio */
+.single-product div.product p.price {
+    display: none;
+}
+
+/* Que el contenido ocupe todo el ancho */
+.single-product div.product .summary {
+    width: 100%;
+}
+
+/* inputs */
+input[type=text], input[type=email], input[type=password], textarea, .input-text{
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+/************************************/
+/* Página sobre emotions  id-108    */
+/************************************/
+
+/* Quitar titulo */
+.page-id-108 .entry-title {
+    display: none;
+}
+
+/************************************/
+/* Pagina de contacto id-89         */
+/************************************/
+
+/* Quitar titulo */
+.page-id-89 .entry-title {
+    display: none;
+}
+
+/* reducir ancho del contenido para pantallas grandes */
+@media(min-width:768px) { 
+    .page-id-89 .entry-content {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+/* Boton del formulario */
+input[type="submit"] {
+    border-radius: 5px;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+    color: white;
+    width: 100%;
+}
+
+
+/************************************/
+/* Página de login / mi cuenta      */
+/************************************/
+
+/* reducir ancho del contenido para pantallas grandes */
+/* El login se ve bien pero mi cuenta no */
+@media(min-width:768px) { 
+    .page-id-9 .entry-content {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Quitar titulo */
+.page-id-9 .entry-title {
+    display: none;
+}
+
+.woocommerce-LostPassword {
+    text-align: center;
+}
+
+/* texto privacidad */
+.woocommerce-privacy-policy-text {
+    font-weight: 200;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Boton del formulario */
+.form-row .button {
+    width: 100%;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+    color: white;
+    border-radius: 5px;
+}
