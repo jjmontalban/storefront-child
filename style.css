@@ -15,6 +15,112 @@ body {
     background-color: #242424;
 }
 
+
+/* Estilos excepcion pantallas muy pequeñas */
+@media(min-width:470px) { 
+    /* Añadir descripcion junto con logo */
+    .site-header .custom-logo-link {
+        display: flex;
+        align-items: center;
+    }
+    .site-header .custom-logo-link::after {
+        content: "Experiencia Virtual";
+        padding-left: 0.4rem;
+    }
+    .storefront-secondary-navigation.woocommerce-active .site-header .site-branding {
+	    width: auto;
+    }
+}
+
+/* Estilos de version de escritorio */
+
+@media(min-width:768px) { 
+    /* Reducir anchos cabecera */
+    .site-header {
+        margin-bottom: 2% !important;
+        margin-top: -1.9% !important;
+    }
+    .storefront-secondary-navigation.woocommerce-active 
+    .site-header .secondary-navigation {
+        margin-bottom: auto;
+    }
+
+    .site-header .site-branding {
+        margin-bottom: 0;
+    }
+
+    /* Rreducir */
+    .storefront-full-width-content .woocommerce-products-header {
+        padding-bottom: 1%;
+    }
+
+    /* interlineado */
+    .storefront-full-width-content .woocommerce-products-header{
+        line-height: 0;
+    }
+
+    .wp-block-button__link:not(.has-background) {
+        line-height: 1;
+    }
+
+    .wp-block-columns {
+        margin-bottom: 1%;
+    }
+
+    .woocommerce ul.products {
+        text-align: center;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .storefront-full-width-content .site-main ul.products.columns-3 li.product {        padding-top: 0;
+        padding-top: 0.3rem !important;
+        line-height: 1.3 !important;
+    }
+
+    h2,p,span {
+        margin-bottom: 0.5rem !important;
+    }
+
+    ul.products li.product img {
+        width: 40% !important;
+        margin-bottom: 0.3rem;
+    }
+
+    .page-id-9 .storefront-breadcrumb {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .page-id-100 .storefront-breadcrumb {
+        padding: 0 !important;
+    }
+
+    .page-id-108 .storefront-breadcrumb {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .page-id-89 .storefront-breadcrumb {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+/* estilos propios de version movil */
+@media(max-width:768px) { 
+    .btn-relax-quick {
+        width: 100% !important;
+    }
+    .btn-sleep-quick {
+        width: 100% !important;
+    }
+    .btn-peace-quick {
+        width: 100% !important;
+    }
+}
 /* titulos */
 h2 {
     text-transform: uppercase;
@@ -60,10 +166,11 @@ p {
     width: auto;
 }
 
-/* Botón pruébalo gratis */
+/* Botón volver a la tienda */
 .wp-block-button__link:not(.has-background) {
-    background-color: red;
-    background-image: linear-gradient(to right, red, rgb(255, 209, 5));
+    border-radius: 5px;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
     color: white;
 }
 
@@ -208,7 +315,13 @@ ul.products li.product .price, ul.products .wc-block-grid__product .price,
 /**************************************/
 
 /* Ocultar avisos y mensajes de error varios */
-.woocommerce-info, .woocommerce-message, .woocommerce-error {
+/* .woocommerce-error  {
+    display: none;
+} */
+ .woocommerce-message {
+    display: none;
+}
+.woocommerce-info  {
     display: none;
 }
 
@@ -347,6 +460,15 @@ input[type=text], input[type=email], input[type=password], textarea, .input-text
     display: none;
 }
 
+/* Modificar boton pruébalo */
+.page-id-108 .wp-block-button__link:not(.has-background) {
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+    color: white;
+    pointer-events: all;
+    cursor: default;
+}
+
 /************************************/
 /* Pagina de contacto id-89         */
 /************************************/
@@ -413,3 +535,44 @@ input[type="submit"] {
     color: white;
     border-radius: 5px;
 }
+
+.storefront-full-width-content.woocommerce-account .entry-header {
+    padding: 0 !important;
+}
+
+/************************************/
+/* Página de registro               */
+/************************************/
+
+.btn-registro {
+    width: 100%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #e2027f;
+    
+    font-weight: 300;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 0.2rem;
+} 
+
+/* Quitar titulo */
+.page-id-8 .entry-title {
+    display: none;
+}
+.page-id-100 .entry-title {
+    display: none;
+}
+
+.page-id-8 .wp-block-button {
+    border-radius: 5px;
+    background-color: #e2027f;
+    background-image: linear-gradient(to right, #e2027f, #8a1e84);
+}
+
+
+

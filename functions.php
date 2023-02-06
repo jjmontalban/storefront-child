@@ -30,7 +30,6 @@ add_action('wp_enqueue_scripts', function ()
     wp_enqueue_style('medicall-font-css', get_stylesheet_directory_uri() . '/fonts/stylesheet.css');
 });
 
-
 //Limita el carrito de WooCommerce a un único producto
 add_filter( 'woocommerce_add_cart_item_data', 'mk_only_one_item_in_cart', 10, 1 );
 function mk_only_one_item_in_cart( $cartItemData ) 
@@ -106,7 +105,7 @@ function woo_show_excerpt_shop_page()
                     case 13:
                         ?>
                             <p>Efecto: <?php echo $fecha_efecto ?> a <?php echo $fecha_sig->format('d-m-y') ?></p>
-                            <a href="#" id="product_id_11" class="button quick-view-button" data-product_id="11">Saber más</a>
+                            <a href="#" id="product_id_13" class="button quick-view-button" data-product_id="13">Saber más</a>
                         <?php
                         break;
                     
@@ -121,7 +120,7 @@ function woo_show_excerpt_shop_page()
                         return 0;	
                 }
 
-                echo "<br><p class='gratis'>1ª COMPRA GRATUITA</p>";   
+                echo "<br><p style='font-size: smaller;'>1ª COMPRA GRATUITA</p>";   
             ?>
         </div>
     <?php
@@ -244,7 +243,7 @@ function bbloomer_separate_registration_form()
     if ( is_user_logged_in() ) return;
     ob_start();
   
-    do_action( 'woocommerce_before_customer_login_form' );
+    do_action( 'wooco   mmerce_before_customer_login_form' );
     ?>
        <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
           <?php do_action( 'woocommerce_register_form_start' ); ?>
@@ -310,4 +309,18 @@ function hideSectionProfile( $items )
 	unset($items['dashboard']);
 
     return $items;
+}
+
+/* Cambier texto de cupones */
+add_filter( 'gettext', 'traducir_cualquier_texto', 10, 3 );
+function traducir_cualquier_texto( $translated, $original, $domain ) 
+{
+     if ( $translated == "Se ha alcanzado el límite de uso de cupones." ) {
+         $translated = "Ya ha usado su prueba gratuita. Por favor, realice el pago para obtener el producto. ";
+     }
+     if ( $original == "Coupon usage limit has been reached." ) {
+         $translated = "Ya ha usado su prueba gratuita. Por favor, realice el pago para obtener el producto. ";
+     }
+   
+     return $translated;
 }

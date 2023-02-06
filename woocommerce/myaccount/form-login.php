@@ -56,7 +56,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			{
    				?>
 					<br>
-    				<p class="has-text-align-center">¿Todavía no eres cliente? <a href="/registro" data-type="URL" data-id="/registro">Registrarme</a></p>
+    				<p class="btn-registro has-text-align-center">¿Todavía no eres cliente? <a href="/registro" data-type="URL" data-id="/registro">Registrarme</a></p>
    				<?php
                 } 
 			do_action( 'woocommerce_login_form_end' ); ?>

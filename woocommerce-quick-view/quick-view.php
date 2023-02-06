@@ -63,30 +63,33 @@ add_filter( 'woocommerce_add_to_cart_form_action', '__return_empty_string' );
 					case 11:
 						?>
 						<h2>E-RELAX</h2>
-						<p>E-RELAX ayuda a autorregularte el estrés con un solo clic, proporcionando tranquilidad</p>
+						<p>E-RELAX ayuda a autorregularte el estrés con un solo clic, proporcionando tranquilidad. Efecto de larga duración.</p>
 						<p>Es fácil comprobar su efectividad. Comprueba el efecto el <?php echo $fecha_efecto; ?> comparando tu estado de ánimo 10min antes y  10min después de las 19:00</p>
 						<p>Te invitamos a probar los resultados, por ello tu primera compra será completamente gratis.</p>
 						<a href="https://emotionpills.com/finalizar-compra/?add-to-cart=11" class="button btn-relax-quick">Comprar</a>
+						<p style="font-size: smaller; color:grey">E-RELAX no es una pastilla física. Es un método de autorregulación. Conoce más <a href="/sobre-emotions">aquí</a>.</p>
 						<?php
 						break;
 
 					case 13:
 						?>
 						<h2>E-SLEEP</h2>
-						<p>E-SLEEP ayuda a autorregularte el estrés con un solo clic, proporcionando tranquilidad.</p>
+						<p>E-SLEEP ayuda a autorregularte el sueño con un solo clic, proporcionando un buen descanso.</p>
 						<p>Es fácil comprobar su efectividad. Comprueba el efecto la noche del <?php echo $fecha_efecto; ?> al <?php echo $fecha_sig->format('d-m-y'); ?> analizando la calidad de tu sueño al despertar.</p>
 						<p>Te invitamos a probar los resultados, por ello tu primera compra será completamente gratis.</p>
 						<a href="https://emotionpills.com/finalizar-compra/?add-to-cart=13" class="button btn-sleep-quick">Comprar</a>
+						<p style="font-size: smaller; color:grey">E-SLEEP no es una pastilla física. Es un método de autorregulación. Conoce más <a href="/sobre-emotions">aquí</a>.</p>
 						<?php
 						break;
-
-					case 14:
-						?>
-						<h2>E-RELAX</h2>
-						<p>E-RELAX ayuda a autorregularte la tristeza con un solo clic mejorando su estado de ánimo.</p>
+						
+						case 14:
+							?>
+						<h2>E-PEACE</h2>
+						<p>E-PEACE ayuda a autorregularte la tristeza con un solo clic mejorando su estado de ánimo. Efecto de larga duración.</p>
 						<p>Es fácil comprobar su efectividad. Comprueba el efecto el <?php echo $fecha_efecto; ?> comparando tu estado de ánimo 10min antes y  10min después de las 19:00</p>
 						<p>Te invitamos a probar los resultados, por ello tu primera compra será completamente gratis.</p>
 						<a href="https://emotionpills.com/finalizar-compra/?add-to-cart=14" class="button btn-peace-quick">Comprar</a>
+						<p style="font-size: smaller; color:grey">E-PEACE no es una pastilla física. Es un método de autorregulación. Conoce más <a href="/sobre-emotions">aquí</a>.</p>
 						<?php
 						break;
 
